@@ -1,0 +1,6 @@
+
+- name: Disable boinc-client
+  service:
+    name: boinc-client
+    state: stopped
+    enabled: no

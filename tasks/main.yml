@@ -1,0 +1,9 @@
+---
+
+- name: Boinc disabled
+  include: disabled.yml
+  when: boinc_state|string in 'Disabled,disabled'
+
+- name: Boinc enabled
+  include: enabled.yml
+  when: boinc_state|string in 'Enabled,enabled'

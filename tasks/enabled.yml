@@ -1,0 +1,37 @@
+
+- name: Attach account manager
+  command: boinccmd --join_acct_mgr "{{ boinc_acct_mgr_url }}" "{{ boinc_acct_mgr_user }}" "{{ boinc_acct_mgr_pass }}"
+  when: boinc_acct_mgr|string in 'True,true,Yes,yes,Enabled,enabled'
+  register: command_output
+  changed_when: false
+  failed_when: command_output.rc != 0
+
+- name: Detach account manager
+  command: boinccmd --quit_acct_mgr
+  when: boinc_acct_mgr|string in 'False,false,No,no,Disabled,disabled'
+  register: command_output
+  changed_when: command_output.stdout != ''
+  failed_when: command_output.rc != 0
+
+- name: Attach project
+  command: boinccmd --project_attach "{{ item.url }}" "{{ item.key }}"
+  with_items: boinc_project_list
+  when: (item.state|default(boinc_project_state))|string in 'Present,present,Enabled,enabled'
+  register: command_output
+  changed_when: command_output|success
+  failed_when: command_output.rc != 0 and command_output.rc != 126
+
+- name: Manage project
+  command: boinccmd --project "{{ item.url }}" "{{ item.action }}"
+  with_items: "{{ boinc_project_list | selectattr('action', 'defined') | list }}"
+  register: command_output
+  changed_when: command_output|success
+  failed_when: command_output.rc != 0
+
+- name: Detach project
+  command: boinccmd --project "{{ item.url }}" detach
+  with_items: boinc_project_list
+  when: (item.state|default(boinc_project_state))|string in 'Absent,absent,Disabled,disabled'
+  register: command_output
+  changed_when: command_output|success
+  failed_when: command_output.rc != 0 and command_output.rc != 255

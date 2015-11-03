@@ -1,0 +1,16 @@
+---
+
+# Boinc client state
+# Enabled|Disabled
+boinc_state: 'enabled'
+
+# Use boinc account manager?
+# No|Yes
+boinc_acct_mgr: 'no'
+
+# Default project state
+boinc_project_state: 'enabled'
+
+# Project list
+boinc_project_list: []
+
