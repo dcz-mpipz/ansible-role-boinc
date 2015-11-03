@@ -84,10 +84,10 @@ these from the command line using the `-e` option to avoid problems.
 - hosts: boinc
   vars:
     boinc_project_list:
-        - url: 'http://einstein.phys.uwm.edu/'
-          key: 'alskfjalskjfalkfjalfjaljflkfjaljfalskjf'
-        - url: 'http://atlasathome.cern.ch/'
-          key: 'alskfjalskjfalkfjalfjaljflkfjaljfalskjf'
+      - url: 'http://einstein.phys.uwm.edu/'
+        key: 'alskfjalskjfalkfjalfjaljflkfjaljfalskjf'
+      - url: 'http://atlasathome.cern.ch/'
+        key: 'alskfjalskjfalkfjalfjaljflkfjaljfalskjf'
   roles:
   - { role: GROG.boinc, become: yes }
 ```
