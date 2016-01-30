@@ -94,21 +94,10 @@ galaxy_info:
   #  - lenny
   #  - squeeze
   #  - wheezy
-  categories:
-  #- cloud
-  #- cloud:ec2
-  #- cloud:gce
-  #- cloud:rax
-  #- clustering
-  #- database
-  #- database:nosql
-  #- database:sql
-  #- development
-  #- monitoring
-  #- networking
-  #- packaging
+  galaxy_tags:
+  - boinc
+  - grid
   - system
-  #- web
 dependencies:
   - { role: GROG.package,
         package_list: [
