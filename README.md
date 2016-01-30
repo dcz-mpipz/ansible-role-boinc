@@ -92,14 +92,13 @@ these from the command line using the `-e` option to avoid problems.
   - { role: GROG.boinc, become: yes }
 ```
 
-## License
-
-LGPLv3
-
 ## Contributing
 
 All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-boinc/issues)!
 
-## Author Information
+## Author
 
 By [G. Roggemans](https://github.com/groggemans)
+
+## License
+MIT
