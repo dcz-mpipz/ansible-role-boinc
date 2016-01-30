@@ -1,6 +1,6 @@
 # Boinc
 
-[![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.boinc-660198.svg?style=flat)](https://galaxy.ansible.com/list#/roles/5816)
+[![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.boinc-660198.svg?style=flat)](https://galaxy.ansible.com/GROG/boinc)
 [![Build Status](https://travis-ci.org/GROG/ansible-role-boinc.svg?branch=master)](https://travis-ci.org/GROG/ansible-role-boinc)
 
 A role for managing BOINC clients. The role installs the BOINC client and lets
