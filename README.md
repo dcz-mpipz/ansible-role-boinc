@@ -1,7 +1,7 @@
 # Boinc
 
-[![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.boinc-660198.svg?style=flat)](https://galaxy.ansible.com/GROG/boinc)
-[![Build Status](https://travis-ci.org/GROG/ansible-role-boinc.svg?branch=master)](https://travis-ci.org/GROG/ansible-role-boinc)
+[![Ansible Galaxy][galaxy_image]][galaxy_link]
+[![Build Status][travis_image]][travis_link]
 
 A role for managing BOINC clients. The role installs the BOINC client and lets
 you manage it. There are two options for managing your projects:
@@ -59,7 +59,7 @@ these from the command line using the `-e` option to avoid problems.
 
 ## Dependencies
 
-- [GROG.package](https://galaxy.ansible.com/list#/roles/4689)
+- [GROG.package][grog.package]
 
 ## Example Playbook
 
@@ -93,12 +93,20 @@ these from the command line using the `-e` option to avoid problems.
 ```
 
 ## Contributing
-
-All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-boinc/issues)!
+All assistance, changes or ideas [welcome][issues]!
 
 ## Author
-
-By [G. Roggemans](https://github.com/groggemans)
+By [G. Roggemans][groggemans]
 
 ## License
 MIT
+
+[galaxy_image]:         https://img.shields.io/badge/galaxy-GROG.boinc-660198.svg?style=flat
+[galaxy_link]:          https://galaxy.ansible.com/GROG/boinc
+[travis_image]:         https://travis-ci.org/GROG/ansible-role-boinc.svg?branch=master
+[travis_link]:          https://travis-ci.org/GROG/ansible-role-boinc
+
+[grog.package]:         https://galaxy.ansible.com/GROG/package
+
+[issues]:               https://github.com/GROG/ansible-role-boinc/issues
+[groggemans]:           https://github.com/groggemans
