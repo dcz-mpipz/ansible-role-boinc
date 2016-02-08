@@ -2,6 +2,8 @@
 
 [![Ansible Galaxy][galaxy_image]][galaxy_link]
 [![Build Status][travis_image]][travis_link]
+[![Latest tag][tag_image]][tag_url]
+[![Gitter chat][gitter_image]][gitter_url]
 
 A role for managing BOINC clients. The role installs the BOINC client and lets
 you manage it. There are two options for managing your projects:
@@ -105,6 +107,10 @@ MIT
 [galaxy_link]:          https://galaxy.ansible.com/GROG/boinc
 [travis_image]:         https://travis-ci.org/GROG/ansible-role-boinc.svg?branch=master
 [travis_link]:          https://travis-ci.org/GROG/ansible-role-boinc
+[tag_image]:            https://img.shields.io/github/tag/GROG/ansible-role-boinc.svg
+[tag_url]:              https://github.com/GROG/ansible-role-boinc/tags
+[gitter_image]:         https://badges.gitter.im/GROG/chat.svg
+[gitter_url]:           https://gitter.im/GROG/chat
 
 [grog.package]:         https://galaxy.ansible.com/GROG/package
 
