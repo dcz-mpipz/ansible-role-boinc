@@ -5,6 +5,8 @@
 [![Latest tag][tag_image]][tag_url]
 [![Gitter chat][gitter_image]][gitter_url]
 
+**This role has been deprecated.**
+
 A role for managing BOINC clients. The role installs the BOINC client and lets
 you manage it. There are two options for managing your projects:
 
