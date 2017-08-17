@@ -15,7 +15,7 @@
 
 - name: Attach project
   command: boinccmd --project_attach "{{ item.url }}" "{{ item.key }}"
-  with_items: boinc_project_list
+  with_items: "{{ boinc_project_list }}"
   when: (item.state|default(boinc_project_state))|string in 'Present,present,Enabled,enabled'
   register: command_output
   changed_when: command_output|success
@@ -30,7 +30,7 @@
 
 - name: Detach project
   command: boinccmd --project "{{ item.url }}" detach
-  with_items: boinc_project_list
+  with_items: "{{ boinc_project_list }}"
   when: (item.state|default(boinc_project_state))|string in 'Absent,absent,Disabled,disabled'
   register: command_output
   changed_when: command_output|success
