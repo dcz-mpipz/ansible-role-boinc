@@ -102,6 +102,5 @@ dependencies:
   - { role: GROG.package,
         package_list: [
           { name: boinc },
-          { name: virtualbox }
         ]
     }
